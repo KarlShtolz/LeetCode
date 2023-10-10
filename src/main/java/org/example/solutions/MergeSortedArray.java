@@ -1,4 +1,4 @@
-package org.example;
+package org.example.solutions;
 
 /**
  * 88. Merge Sorted Array
