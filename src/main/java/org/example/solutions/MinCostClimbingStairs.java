@@ -28,6 +28,7 @@ package org.example.solutions;
  */
 
 public class MinCostClimbingStairs {
+
     public int minCostClimbingStairs(int[] cost) {
         int n = cost.length;
         int prev1 = 0, prev2 = 0;
