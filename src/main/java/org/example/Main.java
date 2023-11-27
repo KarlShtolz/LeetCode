@@ -6,7 +6,13 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        CountSymmetricIntegers countSymmetricIntegers = new CountSymmetricIntegers();
-        System.out.println(countSymmetricIntegers.countSymmetricIntegers(1, 100));
+        /**
+         * s =
+         * "ab##"
+         * t =
+         * "c#d#"
+         */
+        BackspaceStringCompare backspaceStringCompare = new BackspaceStringCompare();
+        System.out.println(backspaceStringCompare.backspaceCompare("ab##", "c#d#"));
     }
 }
