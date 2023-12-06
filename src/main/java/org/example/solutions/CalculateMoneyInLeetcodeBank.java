@@ -24,8 +24,8 @@ package org.example.solutions;
  * Explanation: After the 20th day, the total is
  * (1 + 2 + 3 + 4 + 5 + 6 + 7) + (2 + 3 + 4 + 5 + 6 + 7 + 8) + (3 + 4 + 5 + 6 + 7 + 8) = 96.
  */
-
 public class CalculateMoneyInLeetcodeBank {
+
     public int totalMoney(int n) {
         int week_count = n / 7;
         int remaining_days = n % 7;
