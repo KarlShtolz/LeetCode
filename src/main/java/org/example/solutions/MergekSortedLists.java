@@ -1,5 +1,7 @@
 package org.example.solutions;
 
+import org.example.solutions.utils.ListNode;
+
 /**
  * 23. Merge k Sorted Lists
  * You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
@@ -65,12 +67,5 @@ public class MergekSortedLists {
         curr.next = (l1 != null) ? l1 : l2;
 
         return dummy.next;
-    }
-    public class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 }
