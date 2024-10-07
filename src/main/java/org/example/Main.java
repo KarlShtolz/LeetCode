@@ -1,14 +1,9 @@
 package org.example;
 
-import org.example.solutions.UniquePaths;
-
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        //consoleTimer(50);
-        UniquePaths uniquePaths = new UniquePaths();
-        System.out.println(uniquePaths.uniquePaths(3, 3));
+        consoleTimer(50);
     }
-
     /**
      * @author Alexandr
      * @version 1
