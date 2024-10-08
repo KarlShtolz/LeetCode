@@ -19,23 +19,23 @@ public class MajorityElement {
         if (nums.length == 1) {
             return nums[0];
         }
-        int countM = 1;
-        int numbeM = nums[0];
-        int countT = 0;
-        int numbeT = 0;
+        int countMajority = 1;
+        int majorityNumber = nums[0];
+        int countTemporary = 0;
+        int temporaryNumber = 0;
         for (int i = 1; i < nums.length; i++) {
-            if (nums[i] == numbeM) {
-                countM++;
+            if (nums[i] == majorityNumber) {
+                countMajority++;
             }
-            if (nums[i] != numbeM) {
-                numbeT = nums[i];
-                countT++;
+            if (nums[i] != majorityNumber) {
+                temporaryNumber = nums[i];
+                countTemporary++;
             }
-            if (countT > countM) {
-                countM = countT;
-                numbeM = numbeT;
+            if (countTemporary > countMajority) {
+                countMajority = countTemporary;
+                majorityNumber = temporaryNumber;
             }
         }
-        return numbeM;
+        return majorityNumber;
     }
 }
