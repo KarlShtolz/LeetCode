@@ -1,22 +1,17 @@
 package org.example;
 
+import org.example.solutions.ContainsDuplicateII;
 import org.example.solutions.PowerOfTwo;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        //consoleTimer(50);
-        PowerOfTwo powerOfTwo = new PowerOfTwo();
-        System.out.println("0 " + powerOfTwo.isPowerOfTwo(0));
-        System.out.println("1 " + powerOfTwo.isPowerOfTwo(1));
-        System.out.println("2 " + powerOfTwo.isPowerOfTwo(2));
-        System.out.println("3 " + powerOfTwo.isPowerOfTwo(3));
-        System.out.println("4 " + powerOfTwo.isPowerOfTwo(4));
-        System.out.println("5 " + powerOfTwo.isPowerOfTwo(5));
-        System.out.println("6 " + powerOfTwo.isPowerOfTwo(6));
-        System.out.println("7 " + powerOfTwo.isPowerOfTwo(7));
-        System.out.println("8 " + powerOfTwo.isPowerOfTwo(8));
-        System.out.println("125 " + powerOfTwo.isPowerOfTwo(125));
-        System.out.println("256 " + powerOfTwo.isPowerOfTwo(256));
+        ContainsDuplicateII containsDuplicateII = new ContainsDuplicateII();
+        System.out.println(containsDuplicateII.containsNearbyDuplicate(new int[]{1,2,3,1}, 3) + " exp true");
+        System.out.println(containsDuplicateII.containsNearbyDuplicate(new int[]{1,0,1,1}, 1) + " exp true");
+        System.out.println(containsDuplicateII.containsNearbyDuplicate(new int[]{1,2,3,1,2,3}, 1) + " exp false");
+        System.out.println(containsDuplicateII.containsNearbyDuplicate(new int[]{99,99}, 2) + " exp true");
+        System.out.println(containsDuplicateII.containsNearbyDuplicate(new int[]{2,2}, 3) + " exp true");
+        System.out.println(containsDuplicateII.containsNearbyDuplicate(new int[]{1,2,3,4,5,6,7,8,9,9}, 3) + " exp true");
     }
     /**
      * @author Alexandr
