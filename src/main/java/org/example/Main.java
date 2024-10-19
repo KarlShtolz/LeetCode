@@ -2,16 +2,16 @@ package org.example;
 
 import org.example.solutions.ContainsDuplicateII;
 import org.example.solutions.PowerOfTwo;
+import org.example.solutions.ValidAnagram;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        ContainsDuplicateII containsDuplicateII = new ContainsDuplicateII();
-        System.out.println(containsDuplicateII.containsNearbyDuplicate(new int[]{1,2,3,1}, 3) + " exp true");
-        System.out.println(containsDuplicateII.containsNearbyDuplicate(new int[]{1,0,1,1}, 1) + " exp true");
-        System.out.println(containsDuplicateII.containsNearbyDuplicate(new int[]{1,2,3,1,2,3}, 1) + " exp false");
-        System.out.println(containsDuplicateII.containsNearbyDuplicate(new int[]{99,99}, 2) + " exp true");
-        System.out.println(containsDuplicateII.containsNearbyDuplicate(new int[]{2,2}, 3) + " exp true");
-        System.out.println(containsDuplicateII.containsNearbyDuplicate(new int[]{1,2,3,4,5,6,7,8,9,9}, 3) + " exp true");
+        ValidAnagram va = new ValidAnagram();
+        System.out.println(va.isAnagram("rat", "car") + " exp false");
+        System.out.println(va.isAnagram("anagram", "nagaram") + " exp true");
+        System.out.println(va.isAnagram("ab", "a") + " exp false");
+        System.out.println(va.isAnagram("a", "ab") + " exp false");
+        System.out.println(va.isAnagram("aa", "a") + " exp false");
     }
     /**
      * @author Alexandr
