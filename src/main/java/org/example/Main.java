@@ -1,17 +1,14 @@
 package org.example;
 
+import org.example.solutions.AddDigits;
 import org.example.solutions.ContainsDuplicateII;
 import org.example.solutions.PowerOfTwo;
 import org.example.solutions.ValidAnagram;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        ValidAnagram va = new ValidAnagram();
-        System.out.println(va.isAnagram("rat", "car") + " exp false");
-        System.out.println(va.isAnagram("anagram", "nagaram") + " exp true");
-        System.out.println(va.isAnagram("ab", "a") + " exp false");
-        System.out.println(va.isAnagram("a", "ab") + " exp false");
-        System.out.println(va.isAnagram("aa", "a") + " exp false");
+        AddDigits addDigits = new AddDigits();
+        System.out.println(addDigits.addDigits(38) + " exp 2");
     }
     /**
      * @author Alexandr
