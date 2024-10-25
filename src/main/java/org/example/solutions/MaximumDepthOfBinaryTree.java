@@ -1,4 +1,6 @@
-package org.example.solutions.utils;
+package org.example.solutions;
+
+import org.example.solutions.utils.TreeNode;
 
 /**
  * 104. Maximum Depth of Binary Tree
