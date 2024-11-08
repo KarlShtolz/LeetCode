@@ -1,14 +1,12 @@
 package org.example;
 
-import org.example.solutions.AddDigits;
-import org.example.solutions.ContainsDuplicateII;
-import org.example.solutions.PowerOfTwo;
-import org.example.solutions.ValidAnagram;
+import org.example.solutions.*;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        AddDigits addDigits = new AddDigits();
-        System.out.println(addDigits.addDigits(38) + " exp 2");
+
     }
     /**
      * @author Alexandr
