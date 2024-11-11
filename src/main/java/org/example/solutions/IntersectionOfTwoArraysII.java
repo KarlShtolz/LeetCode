@@ -20,7 +20,7 @@ public class IntersectionOfTwoArraysII {
     public int[] intersect(int[] nums1, int[] nums2) {
         int[] shortArr = (nums1.length < nums2.length) ? nums1 : nums2;
         int[] longArr = (nums1.length < nums2.length) ? nums2 : nums1;
-        int[] temporary = new int[1001];
+        int[] temporary = new int[2222];
         for (int num : shortArr) {
             temporary[num]++;
         }
