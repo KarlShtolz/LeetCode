@@ -30,22 +30,16 @@ import java.util.ArrayList;
 public class WordPattern {
     public boolean wordPattern(String pattern, String s) {
         String [] arr = s.split(" ");
-        if (pattern.length() != arr.length) {
-            return false;
-        }
+        if (pattern.length() != arr.length) {return false;}
         ArrayList<Character> arrChar = new ArrayList<>();
         ArrayList<String> arrStr = new ArrayList<>();
         for (int i = 0; i < arr.length; i++) {
             if (!arrChar.contains(pattern.charAt(i))) {
                 arrChar.add(pattern.charAt(i));
-                if (arrStr.contains(arr[i])) {
-                    return false;
-                }
+                if (arrStr.contains(arr[i])) {return false;}
                 arrStr.add(arr[i]);
             } else {
-                if (!arr[i].equals(arrStr.get(arrChar.indexOf(pattern.charAt(i))))) {
-                    return false;
-                }
+                if (!arr[i].equals(arrStr.get(arrChar.indexOf(pattern.charAt(i))))) {return false;}
             }
         }
         return true;
