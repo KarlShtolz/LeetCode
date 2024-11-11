@@ -18,21 +18,20 @@ import java.util.Arrays;
  */
 public class IntersectionOfTwoArraysII {
     public int[] intersect(int[] nums1, int[] nums2) {
-        int[] smallArr = (nums1.length < nums2.length) ? nums1 : nums2;
-        int[] largeArr = (nums1.length < nums2.length) ? nums2 : nums1;
-        int[] count = new int[1001];
-        for (int num : smallArr) {
-            count[num]++;
+        int[] shortArr = (nums1.length < nums2.length) ? nums1 : nums2;
+        int[] longArr = (nums1.length < nums2.length) ? nums2 : nums1;
+        int[] temporary = new int[1001];
+        for (int num : shortArr) {
+            temporary[num]++;
         }
-        int[] tmp = new int[smallArr.length];
+        int[] temporary2 = new int[shortArr.length];
         int index = 0;
-        for (int num : largeArr) {
-            if (count[num] > 0) {
-                tmp[index++] = num;
-                count[num]--;
+        for (int num : longArr) {
+            if (temporary[num] > 0) {
+                temporary2[index++] = num;
+                temporary[num]--;
             }
         }
-        int[] result = Arrays.copyOf(tmp, index);
-        return result;
+        return Arrays.copyOf(temporary2, index);
     }
 }
