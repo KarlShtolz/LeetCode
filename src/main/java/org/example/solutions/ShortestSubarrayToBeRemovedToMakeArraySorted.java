@@ -1,5 +1,8 @@
 package org.example.solutions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 1574. Shortest Subarray to be Removed to Make Array Sorted
  * Given an integer array arr, remove a subarray (can be empty) from arr such that the remaining elements in arr are
@@ -25,29 +28,25 @@ package org.example.solutions;
  * Explanation: The array is already non-decreasing. We do not need to remove any elements.
  */
 public class ShortestSubarrayToBeRemovedToMakeArraySorted {
-    public int findLengthOfShortestSubarray(int[] arr) {
-        int left = 0;
-        while (left + 1 < arr.length && arr[left] <= arr[left + 1]) {
-            left++;
-        }
-        if (left == arr.length - 1) {
-            return 0;
-        }
-        int right = arr.length - 1;
-        while (right > left && arr[right - 1] <= arr[right]) {
-            right--;
-        }
-        int result = Math.min(arr.length - left - 1, right);
-        int i = 0;
-        int j = right;
-        while (i <= left && j < arr.length) {
-            if (arr[j] >= arr[i]) {
-                result = Math.min(result, j - i - 1);
-                i++;
-            } else {
-                j++;
+    public List<Integer> selfDividingNumbers(int left, int right) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        for (int i = left; i <= right; i++) {
+            if (self(i)) {
+                arr.add(i);
             }
         }
-        return result;
+        return arr;
+    }
+
+    public boolean self(int num) {
+        int num1 = num;
+        while (num1 > 0) {
+            int d = num1 % 10;
+            if (d == 0 || num % d != 0) {
+                return false;
+            }
+            num1 = num1 / 10;
+        }
+        return true;
     }
 }
