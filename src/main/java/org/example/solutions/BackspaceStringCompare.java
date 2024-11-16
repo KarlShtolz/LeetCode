@@ -1,6 +1,7 @@
 package org.example.solutions;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 /**
  * 844. Backspace String Compare
@@ -31,8 +32,6 @@ public class BackspaceStringCompare {
         if (getResultBackspace(arrS).equals(getResultBackspace(arrT))) {
             return true;
         }
-        //System.out.println(getResultBackspace(arrS));
-        //System.out.println(getResultBackspace(arrT));
         return false;
     }
     public String getResultBackspace (char [] s) {
@@ -52,4 +51,30 @@ public class BackspaceStringCompare {
         }
         return lst.toString();
     }
+/**
+ * use Stack
+ */
+//    public boolean backspaceCompare(String s, String t) {
+//        Stack<Character> st1 = new Stack<>();
+//        Stack<Character> st2 = new Stack<>();
+//        for (int i = 0; i < s.length(); i++) {
+//            if (s.charAt(i) != '#') {
+//                st1.push(s.charAt(i));
+//            } else {
+//                if (!st1.isEmpty()) {
+//                    st1.pop();
+//                }
+//            }
+//        }
+//        for (int i = 0; i < t.length(); i++) {
+//            if (t.charAt(i) != '#') {
+//                st2.push(t.charAt(i));
+//            } else {
+//                if (!st2.isEmpty()) {
+//                    st2.pop();
+//                }
+//            }
+//        }
+//        return st1.toString().equals(st2.toString());
+//    }
 }
