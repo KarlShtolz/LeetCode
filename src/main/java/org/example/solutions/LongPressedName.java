@@ -18,7 +18,7 @@ package org.example.solutions;
  * Explanation: 'e' must have been pressed twice, but it was not in the typed output.
  */
 public class LongPressedName {
-    public boolean isLongPressedName(String name, String typed) {
+    public boolean isLongPressedName (String name, String typed) {
         int lenName = name.length();
         int lenTyped = typed.length();
         int ptrName = 0;
@@ -26,24 +26,22 @@ public class LongPressedName {
         char prevNameChar = name.charAt(0);
         char typedChar = typed.charAt(0);
         char nameChar = prevNameChar;
-        while(ptrName < lenName && ptrTyped < lenTyped ){
+        while (ptrName < lenName && ptrTyped < lenTyped ) {
             nameChar = name.charAt(ptrName);
             typedChar = typed.charAt(ptrTyped);
-            if(nameChar == typedChar){
+            if (nameChar == typedChar) {
                 ptrName++;
                 ptrTyped++;
                 prevNameChar = nameChar;
-            }
-            else if(typedChar == prevNameChar){
+            } else if (typedChar == prevNameChar) {
                 ptrTyped++;
-            }
-            else{
+            } else{
                 return false;
             }
         }
-        while(ptrTyped < lenTyped){
+        while (ptrTyped < lenTyped) {
             typedChar = typed.charAt(ptrTyped);
-            if(typedChar != nameChar){
+            if (typedChar != nameChar) {
                 return false;
             }
             ptrTyped++;
