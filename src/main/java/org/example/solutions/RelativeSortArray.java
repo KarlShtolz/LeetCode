@@ -19,7 +19,6 @@ import java.util.Arrays;
  */
 public class RelativeSortArray {
     public int[] relativeSortArray(int[] arr1, int[] arr2) {
-        int flag = -1;
         int l1 = arr1.length;
         int l2 = arr2.length;
         ArrayList<Integer> lst = new ArrayList<>();
