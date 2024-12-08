@@ -19,9 +19,9 @@ public class DayOfTheYear {
     public int dayOfYear(String date) {
         String [] arrDate = date.split("-");
         int ans = 0;
-        int year = Integer.valueOf(arrDate[0]);
-        int month = Integer.valueOf(arrDate[1]);
-        int day = Integer.valueOf(arrDate[2]);
+        int year = Integer.parseInt(arrDate[0]);
+        int month = Integer.parseInt(arrDate[1]);
+        int day = Integer.parseInt(arrDate[2]);
         if (month == 1) {
             return day;
         }
@@ -35,9 +35,6 @@ public class DayOfTheYear {
         return (ans + day);
     }
     public boolean isYearLeap (int year) {
-        if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
-            return true;
-        }
-        return false;
+        return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
     }
 }
