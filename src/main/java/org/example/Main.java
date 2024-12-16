@@ -2,7 +2,7 @@ package org.example;
 
 public class Main {
     public static void main (String [] args) {
-        int n = 7;
+        int n = 11;
         System.out.println("recursive_delim_konfety with argument("+n+") is " + recursive_delim_konfety(7));
         System.out.println("non_recursive_delim_konfety with argument("+n+") is " + non_recursive_delim_konfety(7));
     }
