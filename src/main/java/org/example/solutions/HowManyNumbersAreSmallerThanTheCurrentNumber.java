@@ -26,11 +26,11 @@ package org.example.solutions;
  */
 public class HowManyNumbersAreSmallerThanTheCurrentNumber {
     public int[] smallerNumbersThanCurrent(int[] nums) {
-        int l = nums.length;
+        int arrLength = nums.length;
         int count = 0;
-        int [] ans = new int[l];
-        for (int i = 0; i < l; i++) {
-            for (int j = 0; j < l ; j++) {
+        int [] ans = new int[arrLength];
+        for (int i = 0; i < arrLength; i++) {
+            for (int j = 0; j < arrLength; j++) {
                 if (nums[i] > nums[j] && j != i) {
                     count++;
                 }
