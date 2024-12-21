@@ -26,23 +26,24 @@ package org.example.solutions;
  * Output: 1
  */
 public class DungeonGame {
-    public int calculateMinimumHP(int[][] dungeon) {
-        int[][] dungeonRepresentation = new int[dungeon.length][dungeon[0].length];
-        for (int i = dungeonRepresentation.length - 1; i >= 0; i--) {
-            for (int j = dungeonRepresentation[0].length - 1; j >= 0; j--) {
-                if (i == dungeonRepresentation.length - 1 && j == dungeonRepresentation[0].length - 1) {
-                    dungeonRepresentation[i][j] = Math.min(dungeon[i][j], 0);
-                } else if (i == dungeonRepresentation.length - 1) {
-                    dungeonRepresentation[i][j] = Math.min(dungeon[i][j] + dungeonRepresentation[i][j + 1], 0);
-                } else if (j == dungeonRepresentation[0].length - 1) {
-                    dungeonRepresentation[i][j] = Math.min(dungeon[i][j] + dungeonRepresentation[i + 1][j], 0);
+    public int calculateMinimumHP(int[][] a) {
+        int h = a.length;
+        int w = a[0].length;
+        for (int i = h - 1; i >= 0; i--) {
+            for (int j = w - 1; j >= 0; j--) {
+                if (i == h - 1 && j == w - 1) {
+                    a[i][j] = Math.min(a[i][j], 0);
+                } else if (i == h - 1) {
+                    a[i][j] = Math.min(a[i][j] + a[i][j + 1], 0);
+                } else if (j == w - 1) {
+                    a[i][j] = Math.min(a[i][j] + a[i + 1][j], 0);
                 } else {
-                    int right = dungeon[i][j] + dungeonRepresentation[i][j + 1];
-                    int bottom = dungeon[i][j] + dungeonRepresentation[i + 1][j];
-                    dungeonRepresentation[i][j] = (right >= 0 || bottom >= 0) ? 0 : Math.max(right, bottom);
+                    int right = a[i][j] + a[i][j + 1];
+                    int bottom = a[i][j] + a[i + 1][j];
+                    a[i][j] = (right >= 0 || bottom >= 0) ? 0 : Math.max(right, bottom);
                 }
             }
         }
-        return dungeonRepresentation[0][0] >= 0 ? 1 : -1 * (dungeonRepresentation[0][0]) + 1;
+        return a[0][0] >= 0 ? 1 : -1 * (a[0][0]) + 1;
     }
 }
