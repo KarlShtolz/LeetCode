@@ -1,7 +1,5 @@
 package org.example.solutions;
 
-import java.util.ArrayList;
-
 /**
  * 2138. Divide a String Into Groups of Size k
  * A string s can be partitioned into groups of size k using the following procedure:
