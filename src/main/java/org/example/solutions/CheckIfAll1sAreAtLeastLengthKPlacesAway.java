@@ -23,7 +23,6 @@ public class CheckIfAll1sAreAtLeastLengthKPlacesAway {
                 if (prevOne == -1) {
                     prevOne = i;
                 } else {
-                    System.out.println(i - prevOne);
                     if (i - prevOne < k + 1) {
                         return false;
                     }
